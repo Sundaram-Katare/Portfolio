@@ -25,6 +25,12 @@ function lightMode() {
         element.classList.remove("dark");  // Optionally remove the "dark" class
         buttonEl.innerText = "Dark Mode";
     });
+
+    const skillEl = document.querySelectorAll(".skill");
+
+skillEl.forEach(function(element){
+    element.classList.add("skillLight");
+})
 }
 
 function darkMode(){
@@ -42,4 +48,11 @@ function darkMode(){
         const buttonEl = document.getElementById("btn");
         buttonEl.innerText = "Light Mode";
     })
+
+    const skillEl = document.querySelectorAll(".skill");
+
+skillEl.forEach(function(element){
+    element.classList.add("skill");
+})
 }
+

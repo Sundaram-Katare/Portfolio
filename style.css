@@ -137,61 +137,84 @@
 .skillSet{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 90vh;
   text-align: center;
-  margin: 20px;
-  border: 5px solid ;
-  border-image: repeating-linear-gradient(to bottom right, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89)) 20;
-  border-radius: 45px;
 }
 
 
 .skillSet h1{
- font-family: Arial, Helvetica, sans-serif;
- text-transform: uppercase;
- border: 5px solid gold;
- background-color: rgb(255, 65, 65);
- color: whitesmoke;
- border-radius: 20px;
- margin: 3% 5% 0 5%;
- max-width: min-content;
- padding: 10px;
- box-shadow: 5px 5px greenyellow
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  max-width: fit-content;
+  margin: 30px;
+  text-decoration: underline;
+}
+.skills{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
 }
 
 .skill{
   margin: 20px;
-}
-
-.skillEl{
-  font-size: 80px;
-  transition: font-size 2s;
+  background-color: #14d940;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 10px;
+  max-width: 105px;
+  text-align: center;
   cursor: pointer;
-}
-
-.skillEl:hover{
-  font-size: 130px;
-}
-
-.skill .fa-brands{
-  font-size: 60px;
-  margin: 25px;
-}
-
-.skill .fa-solid{
-  margin: 25px;
+  border: 2px solid black;
+  transition: max-width 1s;
+  height: 35px;
+  transition: height 1s;
+  box-shadow: 4px 4px white;
 }
 
 
-@media  (max-width : 600px){
-  .skill{
-    grid-template-columns: repeat(2, 1fr);  /* 3 icons per row */
-  gap: 10px;  /* Space between icons */
-  margin: 10px;
+.skillLight{
+  margin: 20px;
+  background-color: #14d940;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 10px;
+  max-width: 105px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: max-width 1s;
+  height: 35px;
+  transition: height 1s;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+
+.skill:hover{
+  background-color: rgb(0, 211, 231);
+  color: #000000;
+  max-width: 120px;
+  height: 45px ;
+}
+
+@media (max-width : 713px){
+  .skills{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width : 490px){
+  .skills{
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .skillEl{
-    font-size: 50px;
+  .skill{
+    font-size: 15px;
+    max-width: 75px;
+    height: 25px;
+  }
+
+  .skillSet h1{
+    font-size: 25px;
   }
 }
