@@ -9,14 +9,13 @@
   </head>
   <body>
       <nav class="upper">
-        <h1 class="upperHead dark">DevelopedByS</h1>
         <button class="light-mode-button" id="btn">Light Mode</button>
       </nav>
 
       <div class="intro">
         <div class="about">
             <div class="name">
-                <h1>Sundaram Katare</h1>
+                <h1 id="name"></h1>
                 <h2 class="role">Developer</h2>
                 <p class="aboutMe dark">Currently pursuing Bachelor's degree in computer science 
                     , I thrive on merging my technical expertise with a passion for crafting innovative solutions. ✨</p>
@@ -33,23 +32,120 @@
         </div>
       </div>
 
-      <div class="skillSet">
+    <div class="skillSection">
          <h1>Skills</h1>
+      <div class="skillSet">
         <div class="skills">
-          <h2 class="skill">Java</h2>
-          <h2 class="skill">HTML</h2>
-          <h2 class="skill">CSS</h2>
-          <h2 class="skill">Javascript</h2>
-          <h2 class="skill">C</h2>
-          <h2 class="skill">Node JS</h2>
-          <h2 class="skill">React</h2>
-          <h2 class="skill">MongoDB</h2>
-          <h2 class="skill">Data Structures</h2>
-          <h2 class="skill">Algorithms</h2>
-         </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-java" style="color: #015efe;  margin: 8%;"></i>
+          <h3>Java</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-html5" style="color: #ff7300;  margin: 8%;"></i>
+          <h3>HTML</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-css3-alt" style="color: #71a5fe;  margin: 8%;"></i>
+          <h3>CSS</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-js" style="color: #FFD43B;  margin: 8%;"></i>
+          <h3>Javascript</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-node" style="color: #1dac1b;  margin: 8%;"></i>
+          <h3>Node JS</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-brands fa-react" style="color: #8fb8ff; margin: 8%;"></i>
+          <h3>React</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-solid fa-database" style="color: #55b98b;  margin: 8%;"></i>
+          <h3>Mongo DB</h3>
+        </div>
+        <div class="skillBox">
+          <i class="fa-solid fa-chart-diagram" style="color: #B197FC; margin: 8%;"></i>
+          <h3>Problem Solving</h3>
+        </div>
+        </div>
+      </div>
+    </div>  
+     
+
+      <div class="projectSection">
+        <h1>Projects</h1>
+        <p>My Work</p>
+        <div class="projects">
+          <div class="individualProject">
+            <img src="./images/waterApp.PNG" alt="">
+            <h2>Water Tracker</h2>
+            <div class="linkSection">
+            <a href=" " class="liveLink" target="_blank"><button class="live">Live</button></a>
+            <a href="" class="codeLink" target="_blank"><button class="live">Code</button></a>
+          </div>
+          </div>
+
+          <div class="individualProject">
+            <img src="./images/nike-shoe.jpeg" alt="">
+            <h2>Nike-Shoe-Store</h2>
+            <div class="linkSection">
+            <a href="https://nike-shoe-store-nu.vercel.app/" class="liveLink" target="_blank"><button class="live">Live</button></a>
+            <a href="https://github.com/Sundaram-Katare/Nike-Shoe-Store" class="codeLink" target="_blank"><button class="live">Code</button></a>
+          </div>
+          </div>
+
+          <div class="individualProject">
+            <img src="./images/abcdev.jpeg" alt="">
+            <h2>ABC Dev</h2>
+            <div class="linkSection">
+            <a href="https://abcdev.vercel.app/" class="liveLink" target="_blank"><button class="live">Live</button></a>
+            <a href="https://github.com/Sundaram-Katare/ABCDev" class="codeLink" target="_blank"><button class="live">Code</button></a>
+          </div>
+          </div>
+
+          <div class="individualProject">
+            <img src="./images/guess-number.jpeg" alt="">
+            <h2>GuessNumber-Game</h2>
+            <div class="linkSection">
+            <a href="https://guess-number-sk.vercel.app/" class="liveLink" target="_blank"><button class="live">Live</button></a>
+            <a href="https://github.com/Sundaram-Katare/NumberGame" class="codeLink" target="_blank"><button class="live">Code</button></a>
+          </div>
+          </div>
+
+          <div class="individualProject">
+            <img src="./images/waterApp.PNG" alt="">
+            <h2>Todo List</h2>
+            <div class="linkSection">
+            <a href=" " class="liveLink" target="_blank"><button class="live">Live</button></a>
+            <a href="" class="codeLink" target="_blank"><button class="live">Code</button></a>
+          </div>
+          </div>
+
+          </div>
+        </div>
       </div>
 
-      
+      <div class="leetcodeSection">
+        <h1>LeetCode</h1>
+        <div class="stats">
+        <div class="innerLeft">
+          <h2>Problems Solved</h2>
+          <div class="counter" id="counter" data-target="290">0</div>
+        </div>
+
+        <div class="innerRight">
+          <div class="piechart"></div>
+          <div class="level">
+            <ul>
+              <li style="color: rgb(0, 196, 23)">Easy = 196</li>
+              <li style="color: gold;">Medium = 89</li>
+              <li style="color: red;">Hard = 05</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
       <script src="index.js"></script>
   </body>
 </html>

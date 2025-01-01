@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 *{
     background-color:#000000;
     color: white;
@@ -28,10 +32,12 @@
     margin-right: 10%;
     padding: 10px;
     border-radius: 15px;
-    background-image: linear-gradient(to right, #0a79da, #3e65cc, #594fba, #6c35a4, #780a8a);
-    color: white;
+    /* background-image: linear-gradient(to right, #0a79da, #3e65cc, #594fba, #6c35a4, #780a8a); */
+    background-color: #00ff16;
+    color: #000000;
     cursor: pointer;
     font-weight: 500;
+    float: right;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -134,87 +140,230 @@
   }
 }
 
-.skillSet{
+.skillSection {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   margin: 10%;
+}
+
+.skillSection h1{
+  font-family: "Arvo";
+  text-shadow: 2px 2px #6cc2ed;
+}
+
+.skillSet {
+    width: 100%;
+}
+
+.skills h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    max-width: fit-content;
+    margin: 30px;
+    text-decoration: underline;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.skill {
+    margin: 20px;
+    background-color: #14d940;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 10px;
+    max-width: 105px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: max-width 1s, height 1s;
+    height: 35px;
+    box-shadow: 4px 4px rgb(255, 255, 255);
+}
+
+.skillBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.skillBox i{
+  font-size: 150px;
+}
+
+.skillLight {
+    margin: 20px;
+    background-color: #14d940;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 10px;
+    max-width: 105px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: max-width 1s, height 1s;
+    height: 35px;
+    box-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+.skill:hover {
+    background-color: rgb(0, 211, 231);
+    color: #000000;
+    max-width: 120px;
+    height: 45px;
+}
+
+
+@media (max-width : 975px){
+.skillSection{
+  height: auto;
+}
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width : 450px){
+  .skills{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .skillSection{
+    height: auto;
+  }
+
+  .skillBox i{
+    font-size: 75px;
+  }
+}
+
+.projectSection{
+  margin: 10%;
+}
+
+.projectSection h1{
+  font-family: "Arvo", Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px #6cc2ed;
+}
+
+.projectSection p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.individualProject{
+  background-color: #acacac42;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.individualProject img{
+  height: 320px;
+  align-self: center;
+  border-radius: 15px;
+}
+
+.individualProject h2{
   text-align: center;
+  background: transparent;
+  font-family: "Arvo";
+  font-weight: 100;
 }
 
-
-.skillSet h1{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: bolder;
-  max-width: fit-content;
-  margin: 30px;
-  text-decoration: underline;
-}
-.skills{
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
+.linkSection{
+  display: flex;
+  background: transparent;
+  justify-content: space-evenly;
 }
 
-.skill{
-  margin: 20px;
-  background-color: #14d940;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  font-family: monospace;
-  border-radius: 10px;
-  max-width: 105px;
-  text-align: center;
+.live{
+  padding: 8px;
+  border-radius: 5px;
+  background-color:#0a79da;
+  color: white;
   cursor: pointer;
-  border: 2px solid black;
-  transition: max-width 1s;
-  height: 35px;
-  transition: height 1s;
-  box-shadow: 4px 4px white;
 }
 
+.live:hover{
+  background-color: gold;
+  color: black;
+}
 
-.skillLight{
-  margin: 20px;
-  background-color: #14d940;
-  color: rgb(0, 0, 0);
-  padding: 10px;
+.leetcodeSection{
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  height: 60vh;
+}
+
+.leetcodeSection h1{
+  font-family: "Arvo", Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px #6cc2ed;
+}
+
+.stats{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#counter{
+  font-size: 45px;
+	margin: 10px 0;
+}
+
+.innerLeft{
+  font-family: "Arvo";
+  font-size: 16px;
+}
+
+.innerRight{
+  display: flex;
+}
+
+.innerRight .level{
+  margin: 50px;
+  font-size: 20px;
+}
+
+.innerRight .level ul{
+  list-style:square;
   font-family: monospace;
-  border-radius: 10px;
-  max-width: 105px;
-  text-align: center;
-  cursor: pointer;
-  border: 2px solid black;
-  transition: max-width 1s;
-  height: 35px;
-  transition: height 1s;
-  box-shadow: 4px 4px rgb(0, 0, 0);
 }
 
-
-.skill:hover{
-  background-color: rgb(0, 211, 231);
-  color: #000000;
-  max-width: 120px;
-  height: 45px ;
+.innerRight .level ul li{
+  margin: 10px;
 }
 
-@media (max-width : 713px){
-  .skills{
-    grid-template-columns: repeat(3,1fr);
-  }
-}
-
-@media (max-width : 490px){
-  .skills{
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .skill{
-    font-size: 15px;
-    max-width: 75px;
-    height: 25px;
-  }
-
-  .skillSet h1{
-    font-size: 25px;
-  }
+.piechart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      rgb(255, 3, 3) 30deg,
+      rgb(0, 196, 23) 0 235deg,
+      gold 0 
+  );
 }
