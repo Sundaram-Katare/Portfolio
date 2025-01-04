@@ -87,6 +87,23 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.numbers{
+ display: grid;
+ grid-template-columns: repeat(2 , 1fr);
+ justify-items: end;
+}
+
+.lc p{
+  display: inline-block;
+  font-size: 20px;
+}
+
+.lc{
+  border: 3px solid #75e7a1;
+  padding: 6px;
+  border-radius: 10px;
+}
+
 .links{
   display: flex;
   flex-direction: row;
@@ -200,7 +217,7 @@
 }
 
 .skillBox i{
-  font-size: 150px;
+  font-size: 100px;
 }
 
 .skillLight {
@@ -240,17 +257,26 @@
   .skills{
     grid-template-columns: repeat(2 , 1fr);
   }
+
   .skillSection{
     height: auto;
+    margin: 10px;
+  }
+
+  .skillBox{
+    font-size: 10px;
   }
 
   .skillBox i{
-    font-size: 75px;
+    font-size: 55px;
   }
 }
 
+/* Project Section CSS */
+
 .projectSection{
   margin: 10%;
+  visibility: visible;
 }
 
 .projectSection h1{
@@ -311,6 +337,35 @@
   color: black;
 }
 
+
+@media (max-width : 940px){
+  .projects{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+
+@media (max-width : 450px){
+  .projects{
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .individualProject {
+    height: 15rem;
+  }
+
+  .individualProject img {
+    height: 9rem;
+    width: 16rem;
+    object-fit: cover;
+  }
+
+  .individualProject h2{
+    font-size: 19px;
+  }
+}
+
 .leetcodeSection{
   display: flex;
   flex-direction: column;
@@ -366,4 +421,25 @@
       rgb(0, 196, 23) 0 235deg,
       gold 0 
   );
+}
+
+@media(max-width : 900px){
+  .stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .innerRight{
+   flex-direction: column;
+  }
+
+  .innerRight .level{
+    margin: 40px;
+    font-size: 13px;
+  }
+
+  #counter{
+    font-size: 30px;
+  }
 }

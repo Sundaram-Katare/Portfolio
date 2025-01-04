@@ -14,7 +14,12 @@ function typeWriter(){
 }
 
 typeWriter();
+
+
 const buttonEl = document.getElementById("btn");
+lightMode();
+
+
 buttonEl.addEventListener("click" , function(){
     if(buttonEl.innerText == "Light Mode")
         {
@@ -27,7 +32,7 @@ buttonEl.addEventListener("click" , function(){
 
 function lightMode() {
     console.log("hi");
-    updateCount();
+    
     i = 0;
     document.getElementById("name").innerHTML = "";
     typeWriter();
@@ -42,7 +47,7 @@ function lightMode() {
 
     content.forEach(function(element) {
         element.classList.add("light");
-        element.classList.remove("dark");  // Optionally remove the "dark" class
+        element.classList.remove("dark");  
         buttonEl.innerText = "Dark Mode";
     });
 
@@ -56,7 +61,6 @@ skillEl.forEach(function(element){
 
 function darkMode(){
     console.log("hello");
-    updateCount();
     i = 0;
     document.getElementById("name").innerHTML = "";
     typeWriter();
@@ -82,21 +86,26 @@ function darkMode(){
 })
 }
 
-function updateCount() {
-const counter = document.getElementById("counter");
-const speed2 = 350;
-
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+function updateCount(counterElement) {
+    const speed2 = 350;
+    const target = +counterElement.getAttribute('data-target');
+    const count = +counterElement.innerText;
 
     const inc = target / speed2;
 
     if (count < target) {
-        counter.innerText = Math.round(count + inc);
-        setTimeout(updateCount, 1);
+        counterElement.innerText = Math.round(count + inc);
+        setTimeout(() => updateCount(counterElement), 1);
     } else {
-        counter.innerText = target;
+        counterElement.innerText = target;
     }
-};
+}
 
-updateCount();
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    counter.innerText = "0"; 
+    updateCount(counter);
+});
+
+  
